@@ -1,0 +1,171 @@
+import { Link as RouterLink } from 'react-router-dom';
+import { PATH } from '../router/paths';
+import { config } from '../config';
+import { MotionInView, varFadeInUp } from '../components/animate';
+
+export default function Services() {
+  const services = [
+    {
+      title: 'Family Medicine',
+    },
+    {
+      title: 'Internal Medicine',
+    },
+    {
+      title: 'Surgical Specialities',
+    },
+    {
+      title: 'Obstetrics & Gynaecology',
+    },
+    {
+      title: 'Fertility Services',
+    },
+    {
+      title: 'Geriatrics',
+    },
+    {
+      title: 'Dentistry',
+    },
+    {
+      title: 'Physiotherapy',
+    },
+
+    {
+      title: 'Diagnostic Services',
+    },
+  ];
+  const { tel1 } = config();
+
+  return (
+    <>
+      <div className='container content-space-t-3 content-space-t-lg-5'>
+        <div className='w-lg-65 text-center mx-lg-auto mb-5 mb-md-9'>
+          <h1>Our services</h1>
+          <p className='text-muted'>
+            Our mission is to provide the highest quality of Healthcare services
+            by bringing together the right medical components with a view to
+            maintaining our position as the best private healthcare provider in
+            Nigeria.
+          </p>
+        </div>
+
+        <div className='row gx-3 gx-lg-4'>
+          <div className='col-5 align-self-end'>
+            <MotionInView variants={varFadeInUp}>
+              <img
+                className='img-fluid rounded-2'
+                src='https://res.cloudinary.com/thebrickng/image/upload/v1657288395/jentomed-assets/WhatsApp_Image_2022-07-03_at_10.02.07_AM_zp3lw8.jpg'
+                alt='Image Description'
+              />
+            </MotionInView>
+          </div>
+
+          <div className='col-7'>
+            <MotionInView variants={varFadeInUp}>
+              <div className='ms-lg-4'>
+                <img
+                  className='img-fluid rounded-2'
+                  src='https://res.cloudinary.com/thebrickng/image/upload/v1657288398/jentomed-assets/WhatsApp_Image_2022-07-03_at_10.02.06_AM_2_xjtq9h.jpg'
+                  alt='Image Description'
+                />
+              </div>
+            </MotionInView>
+          </div>
+        </div>
+      </div>
+
+      <div className='container content-space-2 content-space-lg-3'>
+        <MotionInView variants={varFadeInUp}>
+          <div className='w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9'>
+            <span className='text-cap'>Allied health services</span>
+            <h2>
+              Our services are tailored to provide the best all round medical
+              care for our patients
+            </h2>
+          </div>
+        </MotionInView>
+
+        <div className='row justify-content-lg-center'>
+          {services.map((s, index) => (
+            <div className='col-md-6 col-lg-5 mb-3 mb-md-5 mb-lg-7' key={index}>
+              <MotionInView variants={varFadeInUp}>
+                <div className='d-flex ps-md-5'>
+                  <div className='flex-grow-1 ms-3'>
+                    <h4>{s.title}</h4>
+                    {/* <p>We stay lean and help your product do one thing well.</p> */}
+                  </div>
+                </div>
+              </MotionInView>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='container'>
+        <div className='row'>
+          <div className='col-lg-6 mb-3 mb-lg-0'>
+            <MotionInView variants={varFadeInUp}>
+              <div className='card bg-primary h-100 overflow-hidden'>
+                <div className='card-body'>
+                  <div className='w-65 pe-2'>
+                    <h2 className='card-title text-white'>Emergencies</h2>
+                    <p className='card-text text-white'>
+                      We provide 24/7 emergency and. Simply call the number
+                      below.
+                    </p>
+                    <a
+                      className='btn btn-light btn-sm btn-transition'
+                      href={`tel:${tel1}`}
+                    >
+                      {tel1}
+                    </a>
+                  </div>
+
+                  <div className='position-absolute end-0 bottom-0 w-50 mb-n3 me-n7'>
+                    <img
+                      className='card-img'
+                      src='https://res.cloudinary.com/thebrickng/image/upload/v1657404187/jentomed-assets/physiotherapy_nnpvf0.png'
+                      alt='Image Description'
+                    />
+                  </div>
+                </div>
+              </div>
+            </MotionInView>
+          </div>
+
+          <div className='col-lg-6'>
+            <MotionInView variants={varFadeInUp}>
+              <div className='card bg-warning h-100 overflow-hidden'>
+                <div className='card-body'>
+                  <div className='w-65 pe-2'>
+                    <h2 className='card-title text-white'>
+                      Book an appointment
+                    </h2>
+                    <p className='card-text text-white'>
+                      Our medical doctors are available seven days a week. to
+                      book an appointment online click the button below.
+                    </p>
+                    <RouterLink
+                      className='btn btn-light btn-sm btn-transition'
+                      to={PATH.appointment}
+                    >
+                      Book appointment
+                    </RouterLink>
+                  </div>
+
+                  <div className='position-absolute end-0 bottom-0 w-50 mb-n3 me-n7'>
+                    <img
+                      className='card-img'
+                      src='https://res.cloudinary.com/thebrickng/image/upload/v1657404195/jentomed-assets/appointment_nd0dw9.png'
+                      alt='jentomed-hospital'
+                    />
+                  </div>
+                </div>
+              </div>
+            </MotionInView>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
