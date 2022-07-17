@@ -4,31 +4,37 @@ export default function OurServices() {
   const services = [
     {
       title: 'Surgical Specialities',
+      desc: 'We provide one of the most extensive and experienced surgical service in Nigeria',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657398760/jentomed-assets/surgical_uv7d8h.webp',
     },
     {
       title: 'Paediatrics',
+      desc: 'We offer a complete service for child evaluation, vaccination, screening, treatment and follow-up of acute illnesses; as well as primary and secondary care of chronic illnesses.',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657399171/jentomed-assets/paediatrics_xvrg5k.jpg',
     },
     {
       title: 'Obsterics & Gynaecology',
+      desc: 'We offer comprehensive services for the reproductive health and gynaecological needs of women',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657399177/jentomed-assets/gynacology_wjarai.jpg',
     },
     {
       title: 'Geriatrics',
+      desc: 'We offer special geriatric services for older adults to promote good health, prevent disease, treat afflictions, and manage disabilities.',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657399181/jentomed-assets/Geriatric_Care_3_c2n2jn.jpg',
     },
     {
       title: 'Dentistry',
+      desc: 'We provide comprehensive treatment and skilled dental services.',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657399184/jentomed-assets/images_1_juauev.jpg',
     },
     {
       title: 'Physiotherapy',
+      desc: 'Jentomed offers wholesome rehabilitation services to assist our patients to improve function and  quality of life. ',
       image:
         'https://res.cloudinary.com/thebrickng/image/upload/v1657399683/jentomed-assets/istockphoto-1321088960-170667a_ejcpeb.jpg',
     },
@@ -52,7 +58,7 @@ export default function OurServices() {
                 <div key={index} className='col-sm-6 col-lg-4 mb-3'>
                   <MotionInView variants={varFadeInUp}>
                     <div
-                      className='card card-stretched-vertical card-transition shadow-none bg-img-start gradient-y-overlay-lg-dark'
+                      className='card card-stretched-vertical card-transition shadow-none bg-img-start gradient-y-overlay-lg-dark gradient-x-overlay-lg-dark'
                       style={{
                         backgroundImage: `url(${s.image})`,
                         minHeight: '15rem',
@@ -61,8 +67,8 @@ export default function OurServices() {
                       <div className='card-body'>
                         <div className='card-footer'>
                           <h3 className='text-white mb-0'>{s.title}</h3>
-                          <span className='d-block text-white'>
-                            brief description here
+                          <span className='d-block card-subtitle text-white'>
+                            {s.desc}
                           </span>
                         </div>
                       </div>

@@ -1,10 +1,13 @@
-import { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { NavConfig } from './navconfig';
 import { PATH } from '../../router/paths';
+import { varFadeInDown, varFadeOutUp } from '../../components/animate';
 
 export default function Navbar() {
+  const { pathname } = useLocation();
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     if (!open) {
@@ -13,6 +16,12 @@ export default function Navbar() {
       setOpen(false);
     }
   };
+  const variants = {
+    open: varFadeInDown.animate,
+  };
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
   return (
     <>
       <header
@@ -23,12 +32,11 @@ export default function Navbar() {
           <div className='container'>
             <nav className='js-mega-menu navbar-nav-wrap'>
               <RouterLink className='navbar-brand' to={PATH.home}>
-                {/* <img
+                <img
                   className='navbar-brand-logo'
-                  src='../assets/svg/logos/logo.svg'
+                  src='/static/images/jentomed-logo.jpg'
                   alt='Logo'
-                /> */}
-                <h2>Jentomed</h2>
+                />
               </RouterLink>
 
               <button
@@ -37,12 +45,12 @@ export default function Navbar() {
                 onClick={handleOpen}
               >
                 {open ? (
-                  <span className='navbar-toggler-default'>
-                    <Icon icon='quill:hamburger' />
+                  <span className='navbar-toggler'>
+                    <Icon icon='bytesize:close' />
                   </span>
                 ) : (
-                  <span className='navbar-toggler-toggled'>
-                    <Icon icon='iconoir:cancel' />
+                  <span className='navbar-toggler-default'>
+                    <Icon icon='quill:hamburger' />
                   </span>
                 )}
               </button>
@@ -58,9 +66,14 @@ export default function Navbar() {
                 <ul className='navbar-nav'>
                   {NavConfig.map((item) => (
                     <li className='nav-item'>
-                      <RouterLink className='nav-link' to={item.link}>
-                        {item.title}
-                      </RouterLink>
+                      <motion.div
+                        variants={variants}
+                        animate={open ? 'open' : 'closed'}
+                      >
+                        <RouterLink className='nav-link' to={item.link}>
+                          {item.title}
+                        </RouterLink>{' '}
+                      </motion.div>
                     </li>
                   ))}
                 </ul>

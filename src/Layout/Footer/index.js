@@ -9,7 +9,7 @@ export default function Footer() {
           <div className='border-top border-white-10 my-7' />
 
           <div className='row mb-7'>
-            <div className='col-sm mb-3 mb-sm-0'>
+            <div className='col-sm mx-auto mb-3 mb-sm-0 text-center'>
               <ul className='list-inline list-separator list-separator-light mb-0'>
                 <li className='list-inline-item'>
                   <RouterLink
@@ -28,117 +28,17 @@ export default function Footer() {
                   </RouterLink>
                 </li>
                 <li className='list-inline-item'>
+                  <RouterLink className='link-sm link-light' to={PATH.services}>
+                    Services
+                  </RouterLink>
+                </li>
+                <li className='list-inline-item'>
                   <RouterLink
                     className='link-sm link-light'
                     to={PATH.appointment}
                   >
                     Contact us
                   </RouterLink>
-                </li>
-              </ul>
-            </div>
-
-            <div className='col-sm-auto'>
-              <ul className='list-inline mb-0'>
-                <li className='list-inline-item'>
-                  <a className='btn btn-soft-light btn-xs btn-icon' href='#'>
-                    <i className='bi-facebook'></i>
-                  </a>
-                </li>
-
-                <li className='list-inline-item'>
-                  <a className='btn btn-soft-light btn-xs btn-icon' href='#'>
-                    <i className='bi-google'></i>
-                  </a>
-                </li>
-
-                <li className='list-inline-item'>
-                  <a className='btn btn-soft-light btn-xs btn-icon' href='#'>
-                    <i className='bi-twitter'></i>
-                  </a>
-                </li>
-
-                <li className='list-inline-item'>
-                  <a className='btn btn-soft-light btn-xs btn-icon' href='#'>
-                    <i className='bi-github'></i>
-                  </a>
-                </li>
-
-                <li className='list-inline-item'>
-                  <div className='btn-group'>
-                    <button
-                      type='button'
-                      className='btn btn-soft-light btn-xs dropdown-toggle'
-                      id='footerSelectLanguage'
-                      data-bs-toggle='dropdown'
-                      aria-expanded='false'
-                      data-bs-dropdown-animation
-                    >
-                      <span className='d-flex align-items-center'>
-                        <img
-                          className='avatar avatar-xss avatar-circle me-2'
-                          src='./assets/vendor/flag-icon-css/flags/1x1/us.svg'
-                          alt='Image description'
-                          width='16'
-                        />
-                        <span>English (US)</span>
-                      </span>
-                    </button>
-
-                    <div
-                      className='dropdown-menu'
-                      aria-labelledby='footerSelectLanguage'
-                    >
-                      <a
-                        className='dropdown-item d-flex align-items-center active'
-                        href='#'
-                      >
-                        <img
-                          className='avatar avatar-xss avatar-circle me-2'
-                          src='./assets/vendor/flag-icon-css/flags/1x1/us.svg'
-                          alt='Image description'
-                          width='16'
-                        />
-                        <span>English (US)</span>
-                      </a>
-                      <a
-                        className='dropdown-item d-flex align-items-center'
-                        href='#'
-                      >
-                        <img
-                          className='avatar avatar-xss avatar-circle me-2'
-                          src='./assets/vendor/flag-icon-css/flags/1x1/de.svg'
-                          alt='Image description'
-                          width='16'
-                        />
-                        <span>Deutsch</span>
-                      </a>
-                      <a
-                        className='dropdown-item d-flex align-items-center'
-                        href='#'
-                      >
-                        <img
-                          className='avatar avatar-xss avatar-circle me-2'
-                          src='./assets/vendor/flag-icon-css/flags/1x1/es.svg'
-                          alt='Image description'
-                          width='16'
-                        />
-                        <span>Español</span>
-                      </a>
-                      <a
-                        className='dropdown-item d-flex align-items-center'
-                        href='#'
-                      >
-                        <img
-                          className='avatar avatar-xss avatar-circle me-2'
-                          src='./assets/vendor/flag-icon-css/flags/1x1/cn.svg'
-                          alt='Image description'
-                          width='16'
-                        />
-                        <span>中文 (繁體)</span>
-                      </a>
-                    </div>
-                  </div>
                 </li>
               </ul>
             </div>

@@ -2,32 +2,55 @@ import { Link as RouterLink } from 'react-router-dom';
 import { PATH } from '../router/paths';
 import { config } from '../config';
 import { MotionInView, varFadeInUp } from '../components/animate';
+import Page from '../components/Page';
 
 export default function Services() {
   const services = [
+    {
+      title: 'Surgical Specialities',
+      desc: 'We provide one of the most extensive and experienced surgical service in Nigeria',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657398760/jentomed-assets/surgical_uv7d8h.webp',
+    },
+    {
+      title: 'Paediatrics',
+      desc: 'We offer a complete service for child evaluation, vaccination, screening, treatment and follow-up of acute illnesses; as well as primary and secondary care of chronic illnesses.',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657399171/jentomed-assets/paediatrics_xvrg5k.jpg',
+    },
+    {
+      title: 'Obsterics & Gynaecology',
+      desc: 'We offer comprehensive services for the reproductive health and gynaecological needs of women',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657399177/jentomed-assets/gynacology_wjarai.jpg',
+    },
+    {
+      title: 'Geriatrics',
+      desc: 'We offer special geriatric services for older adults to promote good health, prevent disease, treat afflictions, and manage disabilities.',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657399181/jentomed-assets/Geriatric_Care_3_c2n2jn.jpg',
+    },
+    {
+      title: 'Dentistry',
+      desc: 'We provide comprehensive treatment and skilled dental services.',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657399184/jentomed-assets/images_1_juauev.jpg',
+    },
+    {
+      title: 'Physiotherapy',
+      desc: 'Jentomed offers wholesome rehabilitation services to assist our patients to improve function and  quality of life. ',
+      image:
+        'https://res.cloudinary.com/thebrickng/image/upload/v1657399683/jentomed-assets/istockphoto-1321088960-170667a_ejcpeb.jpg',
+    },
     {
       title: 'Family Medicine',
     },
     {
       title: 'Internal Medicine',
     },
-    {
-      title: 'Surgical Specialities',
-    },
-    {
-      title: 'Obstetrics & Gynaecology',
-    },
+
     {
       title: 'Fertility Services',
-    },
-    {
-      title: 'Geriatrics',
-    },
-    {
-      title: 'Dentistry',
-    },
-    {
-      title: 'Physiotherapy',
     },
 
     {
@@ -37,7 +60,7 @@ export default function Services() {
   const { tel1 } = config();
 
   return (
-    <>
+    <Page title='Our medical services'>
       <div className='container content-space-t-3 content-space-t-lg-5'>
         <div className='w-lg-65 text-center mx-lg-auto mb-5 mb-md-9'>
           <h1>Our services</h1>
@@ -92,7 +115,7 @@ export default function Services() {
                 <div className='d-flex ps-md-5'>
                   <div className='flex-grow-1 ms-3'>
                     <h4>{s.title}</h4>
-                    {/* <p>We stay lean and help your product do one thing well.</p> */}
+                    <p>{s.desc}</p>
                   </div>
                 </div>
               </MotionInView>
@@ -166,6 +189,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </>
+    </Page>
   );
 }

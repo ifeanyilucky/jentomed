@@ -1,9 +1,10 @@
 import { config } from '../config';
+import Page from '../components/Page';
 
 export default function Contact() {
   const { address, email, tel1, tel2 } = config();
   return (
-    <>
+    <Page title='Contact us'>
       <main id='content' role='main'>
         <div className='container content-space-t-3 content-space-t-lg-5 content-space-b-2'>
           <div className='row'>
@@ -148,6 +149,6 @@ export default function Contact() {
           </div>
         </div>
       </main>
-    </>
+    </Page>
   );
 }

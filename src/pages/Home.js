@@ -4,10 +4,11 @@ import JentomedExperience from '../components/Home/JentomedExperience';
 import OurServices from '../components/Home/OurServices';
 import Reviews from '../components/Home/Reviews';
 import { MotionInView, varFadeInUp } from '../components/animate';
+import Page from '../components/Page';
 
 export default function Home() {
   return (
-    <>
+    <Page description='Jentomed Specialist Hospital is a multi-disciplinary private healthcare facility focusing on the best possible clinical outcomes for our patients and their families.'>
       <main id='content' role='main'>
         <div className='position-relative overflow-hidden content-space-t-md-4'>
           <HomeHero />
@@ -76,6 +77,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </>
+    </Page>
   );
 }

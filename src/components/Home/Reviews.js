@@ -6,7 +6,7 @@ export default function Reviews() {
     <>
       <div className='container'>
         <div className='row justify-content-center align-items-md-center mb-7'>
-          <div className='col-11 col-md-6 col-lg-4 mb-5 mb-md-0 me-md-n9'>
+          <div className='col-12 col-md-6 col-lg-6 mb-5 mb-md-0 me-md-n9'>
             <div className='card'>
               <div className='card-body'>
                 <span className='svg-icon text-primary mb-3'>

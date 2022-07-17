@@ -1,8 +1,10 @@
 import { Link as RouterLink } from 'react-router-dom';
 import { PATH } from '../../router/paths';
 import { varFadeInRight, MotionInView } from '../animate';
+import { config } from '../../config';
 
 export default function HomeHero() {
+  const { tel1 } = config();
   return (
     <>
       <div className='container'>
@@ -25,6 +27,12 @@ export default function HomeHero() {
                 >
                   Book an appointment
                 </RouterLink>
+                <p className='text mt-4'>
+                  Do you have an emergency? Please call{' '}
+                  <a href={`tel:${tel1}`} className='text-primary'>
+                    <strong>{tel1}</strong>
+                  </a>
+                </p>
               </div>
             </MotionInView>
           </div>

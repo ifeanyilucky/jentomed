@@ -1,7 +1,8 @@
 import AppointmentForm from '../components/AppointmentForm';
+import Page from '../components/Page';
 export default function Appointment() {
   return (
-    <>
+    <Page title='Book an appointment with us'>
       <main id='content' role='main'>
         <div className='container content-space-t-3 content-space-t-lg-5 content-space-b-2'>
           <div className='row'>
@@ -19,6 +20,6 @@ export default function Appointment() {
           </div>
         </div>
       </main>
-    </>
+    </Page>
   );
 }
