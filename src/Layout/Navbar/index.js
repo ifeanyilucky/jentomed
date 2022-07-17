@@ -71,7 +71,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <div className='my-2 my-lg-0'>
+            <div className='my-2 my-lg-0 ml-5'>
               <RouterLink to={PATH.appointment}>
                 <button className='btn btn-primary my-2 my-sm-0'>
                   Request an appointment
