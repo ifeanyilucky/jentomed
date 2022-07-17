@@ -54,12 +54,12 @@ export default function JentomedExperience() {
                         </span>
                         <h4 className='card-title'>Our medical centre</h4>
                         <p className='card-text small'>
-                          Ours is a general and specialist medical and surgical
-                          centre. We provide in-house specialist services in
-                          endoscopy, surgery and oncology (both surgical and
-                          non-surgical). A wide range of external consultants
-                          spanning different areas of medical practice also work
-                          with us.
+                          Our centre is a general and specialist medical and
+                          surgical centre. We provide in-house specialist
+                          services in endoscopy, surgery and oncology (both
+                          surgical and non-surgical). A wide range of external
+                          consultants spanning different areas of medical
+                          practice also work with us.
                         </p>
                       </div>
                     </div>
@@ -138,14 +138,14 @@ export default function JentomedExperience() {
           </div>
         </div>
         <MotionInView variants={varFadeInRight}>
-        <div
-          className='banner-half-middle-x bg-img-start d-none d-md-block'
-          style={{
-            backgroundImage:
-              'url(https://res.cloudinary.com/thebrickng/image/upload/v1657288893/jentomed-assets/portrait-african-american-woman-working-as-doctor_482257-10153_dlfnma.webp)',
-          }}
-        />
-      </MotionInView>
+          <div
+            className='banner-half-middle-x bg-img-start d-none d-md-block'
+            style={{
+              backgroundImage:
+                'url(https://res.cloudinary.com/thebrickng/image/upload/v1657288893/jentomed-assets/portrait-african-american-woman-working-as-doctor_482257-10153_dlfnma.webp)',
+            }}
+          />
+        </MotionInView>
       </div>
     </>
   );

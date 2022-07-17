@@ -74,7 +74,7 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #121212 !important;
   text-align: var(--bs-body-text-align);
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
@@ -436,7 +436,7 @@ progress {
 }
 .display-1 {
   font-size: calc(1.625rem + 4.5vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -446,7 +446,7 @@ progress {
 }
 .display-2 {
   font-size: calc(1.575rem + 3.9vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -456,7 +456,7 @@ progress {
 }
 .display-3 {
   font-size: calc(1.525rem + 3.3vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -466,7 +466,7 @@ progress {
 }
 .display-4 {
   font-size: calc(1.475rem + 2.7vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -476,7 +476,7 @@ progress {
 }
 .display-5 {
   font-size: calc(1.425rem + 2.1vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -486,7 +486,7 @@ progress {
 }
 .display-6 {
   font-size: calc(1.375rem + 1.5vw);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
 }
 @media (min-width: 1200px) {
@@ -8143,7 +8143,7 @@ fieldset:disabled .btn {
 }
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+  color: #121212;
 }
 .text-muted {
   --bs-text-opacity: 1;
@@ -16689,7 +16689,7 @@ input[type='number'] {
   white-space: nowrap;
 }
 .card-text {
-  color: #677788;
+  color: #121212;
 }
 .card-bordered {
   border-width: 0.0625rem;

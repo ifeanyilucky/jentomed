@@ -29,56 +29,55 @@ export default function Navbar() {
         className='navbar navbar-expand-lg navbar-end navbar-absolute-top navbar-light'
       >
         <div className='container'>
-          <div className='container'>
-            <nav className='js-mega-menu navbar-nav-wrap'>
-              <RouterLink className='navbar-brand' to={PATH.home}>
-                <img
-                  className='navbar-brand-logo'
-                  src='/static/images/jentomed-logo.jpg'
-                  alt='Logo'
-                />
+          <RouterLink className='navbar-brand' to={PATH.home}>
+            <img
+              className='navbar-brand-logo'
+              src='/static/images/jentomed-logo.jpg'
+              alt='Logo'
+            />
+          </RouterLink>
+
+          <button className='navbar-toggler' type='button' onClick={handleOpen}>
+            {open ? (
+              <span className='navbar-toggler'>
+                <Icon icon='bytesize:close' />
+              </span>
+            ) : (
+              <span className='navbar-toggler-default'>
+                <Icon icon='quill:hamburger' />
+              </span>
+            )}
+          </button>
+
+          <div
+            className={
+              open
+                ? 'collapse navbar-collapse show'
+                : 'collapse navbar-collapse'
+            }
+            id='navbarNavDropdown'
+          >
+            <ul className='navbar-nav mr-auto'>
+              {NavConfig.map((item) => (
+                <li className='nav-item'>
+                  <motion.div
+                    variants={variants}
+                    animate={open ? 'open' : 'closed'}
+                  >
+                    <RouterLink className='nav-link' to={item.link}>
+                      {item.title}
+                    </RouterLink>{' '}
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
+            <div className='my-2 my-lg-0'>
+              <RouterLink to={PATH.appointment}>
+                <button className='btn btn-primary my-2 my-sm-0'>
+                  Request an appointment
+                </button>{' '}
               </RouterLink>
-
-              <button
-                className='navbar-toggler'
-                type='button'
-                onClick={handleOpen}
-              >
-                {open ? (
-                  <span className='navbar-toggler'>
-                    <Icon icon='bytesize:close' />
-                  </span>
-                ) : (
-                  <span className='navbar-toggler-default'>
-                    <Icon icon='quill:hamburger' />
-                  </span>
-                )}
-              </button>
-
-              <div
-                className={
-                  open
-                    ? 'collapse navbar-collapse show'
-                    : 'collapse navbar-collapse'
-                }
-                id='navbarNavDropdown'
-              >
-                <ul className='navbar-nav'>
-                  {NavConfig.map((item) => (
-                    <li className='nav-item'>
-                      <motion.div
-                        variants={variants}
-                        animate={open ? 'open' : 'closed'}
-                      >
-                        <RouterLink className='nav-link' to={item.link}>
-                          {item.title}
-                        </RouterLink>{' '}
-                      </motion.div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </nav>
+            </div>
           </div>
         </div>
       </header>

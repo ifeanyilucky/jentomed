@@ -60,6 +60,7 @@ export default function OurServices() {
                     <div
                       className='card card-stretched-vertical card-transition shadow-none bg-img-start gradient-y-overlay-lg-dark gradient-x-overlay-lg-dark'
                       style={{
+                        backgroundImage: `linear-gradient(to top,var(--tw-gradient-stops))`,
                         backgroundImage: `url(${s.image})`,
                         minHeight: '15rem',
                       }}

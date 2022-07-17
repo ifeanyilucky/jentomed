@@ -14,7 +14,7 @@ export default function HomeHero() {
               <div className='col-md-8 mb-7 mb-md-0'>
                 <div className='w-md-75 mb-7'>
                   <h1 className='display-4'>We're healthcare professionals.</h1>
-                  <p className='text'>
+                  <p className='text-black'>
                     We're committed to the best quality of life through
                     preventive and clinical medicine
                   </p>
