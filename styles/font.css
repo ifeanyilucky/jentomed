@@ -1,0 +1,23 @@
+@font-face {
+  font-family: Walsheim;
+  src: url('/fonts/gt-walsheim-regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: Walsheim;
+  src: url('/fonts/gt-walsheim-medium.ttf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: Walsheim;
+  src: url('/fonts/gt-walsheim-bold.ttf');
+  font-weight: 900;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Walsheim !important;
+  font-weight: 400 !important;
+}
