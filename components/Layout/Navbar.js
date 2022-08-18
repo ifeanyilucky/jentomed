@@ -77,11 +77,11 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <div className='my-2 my-lg-0 ml-5'>
+          <div className='my-2 my-lg-0'>
             <Link href={PATH.appointment}>
               <a>
                 <button className='btn btn-primary my-2 my-sm-0'>
-                  Request an appointment
+                  Appointment
                 </button>
               </a>
             </Link>

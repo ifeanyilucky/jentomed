@@ -5,9 +5,6 @@ const sendEmail = (option) => {
   const transport = nodemailer.createTransport({
     host: 'smtp-mail.outlook.com', // hostname
     port: 587, // port for secure SMTP
-    tls: {
-      ciphers: 'SSLv3',
-    },
     auth: {
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,
