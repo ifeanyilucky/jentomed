@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main id='content' role='main'>
       <Meta title='Home' />
-      <div className='position-relative overflow-hidden content-space-t-md-4'>
+      <div className='position-relative overflow-hidden'>
         <HomeHero />
         <div
           className='col-md-10 position-absolute top-0 start-0 zi-n1 gradient-y-three-sm-primary h-100'

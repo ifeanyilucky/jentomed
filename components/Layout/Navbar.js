@@ -23,71 +23,84 @@ export default function Navbar() {
   };
   useEffect(() => {
     setOpen(false);
-  }, []);
+  }, [asPath]);
   return (
-    <nav className='navbar navbar-expand-lg navbar-end navbar-absolute-top navbar-light'>
-      <div className='container'>
-        <Link href={PATH.home}>
-          <a className='navbar-brand'>
-            <img
-              className='navbar-brand-logo'
-              src='/images/jentomed-logo.jpg'
-              alt='Logo'
-            />
-          </a>
-        </Link>
+    <>
+      <nav className='navbar navbar-expand-lg navbar-light bg-white'>
+        <div className='container'>
+          <Link href={PATH.home}>
+            <a className='navbar-brand'>
+              <img
+                className='navbar-brand-logo'
+                src='/images/jentomed-logo.jpg'
+                alt='Logo'
+              />
+            </a>
+          </Link>
 
-        {/* <button className='navbar-toggler' type='button' onClick={handleOpen}>
-          {open ? (
-            <span className='navbar-toggler'>
-              <Icon icon='bytesize:close' />
-            </span>
-          ) : (
-            <span className='navbar-toggler-default'>
-              <Icon icon='quill:hamburger' />
-            </span>
-          )}
-        </button> */}
+          <button
+            className='navbar-toggler'
+            type='button'
+            data-bs-toggle='collapse'
+            data-bs-target='#navbarCollapse'
+            aria-controls='navbarCollapse'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+            onClick={handleOpen}
+          >
+            <span className='navbar-toggler-icon'></span>
+          </button>
+          <div
+            className={
+              open
+                ? 'collapse navbar-collapse show'
+                : 'collapse navbar-collapse'
+            }
+            id='navbarCollapse'
+          >
+            <button
+              className='navbar-toggler'
+              type='button'
+              data-bs-toggle='collapse'
+              data-bs-target='#navbarCollapse'
+              aria-controls='navbarCollapse'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+            >
+              <i className='fe fe-x'></i>
+            </button>
 
-        <div
-          className={
-            open ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'
-          }
-          id='navbarNavDropdown'
-        >
-          <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-            {NavConfig.map((item) => (
-              <li className='nav-item'>
-                <motion.div
-                  variants={variants}
-                  animate={open ? 'open' : 'closed'}
-                >
-                  <Link href={item.link}>
-                    <a
-                      className={
-                        asPath === item.link
-                          ? 'active nav-link font-weight-bolder'
-                          : 'nav-link'
-                      }
-                    >
-                      {item.title}
-                    </a>
-                  </Link>{' '}
-                </motion.div>
-              </li>
-            ))}
-          </ul>
-          <div className='my-2 my-lg-0'>
+            <ul className='navbar-nav ms-auto'>
+              {NavConfig.map((item) => (
+                <li className='nav-item'>
+                  <motion.div
+                    variants={variants}
+                    animate={open ? 'open' : 'closed'}
+                  >
+                    <Link href={item.link}>
+                      <a
+                        className={
+                          asPath === item.link
+                            ? 'active nav-link font-weight-bolder'
+                            : 'nav-link'
+                        }
+                      >
+                        {item.title}
+                      </a>
+                    </Link>{' '}
+                  </motion.div>
+                </li>
+              ))}
+            </ul>
+
             <Link href={PATH.appointment}>
-              <a>
-                <button className='btn btn-primary my-2 my-sm-0'>
-                  Appointment
-                </button>
+              <a className='navbar-btn btn btn-sm btn-primary lift ms-auto'>
+                Appointment
               </a>
             </Link>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 }
