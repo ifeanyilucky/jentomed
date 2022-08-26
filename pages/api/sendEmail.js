@@ -3,10 +3,14 @@ const nodemailer = require('nodemailer');
 
 const sendEmail = (option) => {
   const transport = nodemailer.createTransport({
-    service: '"Outlook365"',
+    service: 'gmail',
     auth: {
+      type: 'OAuth2',
       user: process.env.MAIL_USER,
       pass: process.env.MAIL_PASS,
+      clientId: process.env.CLIENT_ID,
+      clientSecret: process.env.CLIENT_SECRET,
+      refreshToken: process.env.REF_TOKEN,
     },
   });
 
